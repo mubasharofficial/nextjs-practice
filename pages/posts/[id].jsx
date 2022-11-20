@@ -1,7 +1,16 @@
 import { useRouter } from 'next/router'
-import Posts from '.';
+import React from 'react';
 
 export default function Post({postData}){
+
+    const router = useRouter()
+
+    // If the page is not yet generated, this will be displayed
+    // initially until getStaticProps() finishes running
+    if (router.isFallback) {
+      return <div>Loading...</div>
+    }
+    
     return(
         <div key={postData.id}>
             <h2>
