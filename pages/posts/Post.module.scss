@@ -1,0 +1,15 @@
+.postHeading{
+    font-size: 18px;
+    color:gray;
+    margin-top: 60px;
+}
+.post{
+    margin-bottom: 50px;
+    list-style-type: none;
+    @media (max-width: 767px){
+        text-align: center;
+    }
+}
+.ull{
+    list-style-type: none;
+}

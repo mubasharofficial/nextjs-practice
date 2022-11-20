@@ -16,12 +16,11 @@ const StylePostLink = styled.a({
 })
 const Post = ({id,title,body}) => {
   return (
-            <>
-                <li key={id}>
+            <div className='align-content-sm-center'>
+                  <img src={"/images/posts/"+ id +".jpg"} width="240px" height="240px"  className=""/>
                   <Styleh3heading><Link href={"/posts/[id]"} as={"/posts/"+id}>{title} </Link></Styleh3heading> 
                   <p> {body} </p>
-                </li>
-            </>
+            </div>
     
   )
 }

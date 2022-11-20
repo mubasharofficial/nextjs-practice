@@ -1,16 +1,19 @@
 import React from 'react'
 import Post from '../components/posts/Post'
+import sytle from "./Post.module.scss";
 
 function Posts({posts}) {
   return (
-    <ul>
+    <div className='row mb-2 p-2'>
         {
           posts.map((post)=>(
+            <div key={post.id} className="col-md-3">
             <Post {...post}/>
+            </div>
           ))
         }
       
-    </ul>
+    </div>
   )
 }
 export default Posts
