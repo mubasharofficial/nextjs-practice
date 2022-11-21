@@ -31,7 +31,7 @@ export default Posts
 
 
 export async function getStaticProps() {  // static redingring 
-  const res = await fetch('https://jsonplaceholder.typicode.com/posts');
+  const res = await fetch(`${process.env.API_URL}/posts`);
   const posts = await res.json();
   return {
    props:{
