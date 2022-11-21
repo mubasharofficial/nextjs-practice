@@ -2,6 +2,7 @@ import React from 'react'
 import Post from '../components/posts/Post'
 import sytle from "./Post.module.scss";
 
+
 function Posts({posts}) {
   return (
     <div className='row mb-2 p-2'>
@@ -27,7 +28,6 @@ export default Posts
 //   },
 //  }
 // }
-
 
 
 export async function getStaticProps() {  // static redingring 
