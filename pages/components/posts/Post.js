@@ -14,7 +14,7 @@ const StylePostLink = styled.a({
   fontSize:'25px',
   color:'bluelight',
 })
-const Post = ({id,title,body}) => {
+const Post = ({id,title,body,children}) => {
   return (
             <div className='align-content-sm-center'>
                   <img src={"/images/posts/"+ id +".jpg"} width="240px" height="240px"  className=""/>

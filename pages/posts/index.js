@@ -9,7 +9,7 @@ function Posts({posts}) {
         {
           posts.map((post)=>(
             <div key={post.id} className="col-md-3">
-            <Post {...post}/>
+            <Post {...post}> </Post>
             </div>
           ))
         }
