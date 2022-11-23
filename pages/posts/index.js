@@ -1,11 +1,17 @@
 import React from 'react'
+import dynamic from 'next/dynamic';
+// import Header from '../components/Header';
 import Post from '../components/posts/Post'
 import sytle from "./Post.module.scss";
-
+const Header = dynamic( ()=>import("../components/Header"),{
+  loading: () => <p>Loadding.....</p>,
+  ssr:false,
+});
 
 function Posts({posts}) {
   return (
     <div className='row mb-2 p-2'>
+      <Header />
         {
           posts.map((post)=>(
             <div key={post.id} className="col-md-3">
